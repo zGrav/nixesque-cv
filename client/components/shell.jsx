@@ -33,19 +33,19 @@ const Shell = () => {
 			</div>
 			<br />
 			<div style={{ display: 'flex', flexDirection: 'row' }}>
-				<Typing hideCursor speed={-1} startDelay={6000}>
+				<Typing hideCursor speed={-1} startDelay={7000}>
 					<span style={{ color: '#4286f4' }}>
 						guest@hal9000:~$
 					</span>
 				</Typing>
-				<Typing cursor={<Cursor />} speed={200} startDelay={6500}>
+				<Typing cursor={<Cursor />} speed={200} startDelay={7500}>
 					<span>
 						&nbsp;cat whoiszgrav.txt
 					</span>
 				</Typing>
 			</div>
 			<div>
-				<Typing hideCursor speed={-1} startDelay={13000}>
+				<Typing hideCursor speed={-1} startDelay={15000}>
 					<br />
 					<p>
 						Why, I'm very glad you're curious about who I am :)
@@ -57,7 +57,7 @@ const Shell = () => {
 						<span style={{ color: "#ffff00" }}>Hey, I'm David Silva aka z/zGrav. 24 y/o Portuguese that somehow ended up in Cologne, Germany working at ESL and I am having the time of my life.</span>
 					</p>
 					<p>
-						I play videogames and code from time to time. You can find some info about me on the g00glez (even by my alias), Twitter, GitHub and even my Resume which you can find on my old "digital-cv" or ya know, just ask me ;)
+						I play videogames and code from time to time.
 					</p>
 					<p>
 						If you want to have a chat, feel free to hit me up on my email or Twitter for example. Here is my email <a href="mailto:me@zgrav.pro" style={{ color: "#0bc" }}>me@zgrav.pro</a> and handle: <a href="https://twitter.com/notzGrav" style={{ color: "#0bc" }} target="_blank">@notzGrav</a>
@@ -68,19 +68,19 @@ const Shell = () => {
 			</Typing>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'row' }}>
-				<Typing hideCursor speed={-1} startDelay={23000}>
+				<Typing hideCursor speed={-1} startDelay={26000}>
 					<span style={{ color: '#4286f4' }}>
 						guest@hal9000:~$
 					</span>
 				</Typing>
-				<Typing cursor={<Cursor />} speed={200} startDelay={25000}>
+				<Typing cursor={<Cursor />} speed={200} startDelay={28000}>
 					<span>
 						&nbsp;logout
 					</span>
 				</Typing>
 			</div>
 			<div>
-				<Typing hideCursor speed={-1} startDelay={28000}>
+				<Typing hideCursor speed={-1} startDelay={30000}>
 					<p>
 						Connection to hal9000.zgrav.pro closed.
 					</p>

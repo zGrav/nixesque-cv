@@ -52,6 +52,7 @@ class Nix extends Component<*> {
 			});
 
 			setTimeout(() => {
+				document.getElementById('bootup_art').className = 'shadow';
 				document.getElementById('bootup-text').style.display = '';
 			}, 5000);
 		} else {
