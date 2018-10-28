@@ -7,6 +7,10 @@ import Cursor from './cursor';
 const Shell = () => {
 	return (
 		<div>
+			<span>
+				Last login: unknown
+			</span>
+			<br />
 			<div style={{ display: 'flex', flexDirection: 'row' }}>
 				<Typing hideCursor speed={-1}>
 					<span style={{ color: '#4286f4' }}>
@@ -46,11 +50,9 @@ const Shell = () => {
 					<p>
 						Why, I'm very glad you're curious about who I am :)
 					</p>
-					<br />
 					<p>
 						You may be wondering why I built this page? Simple answer, I was bored and decided to do something cool.
 					</p>
-					<br />
 					<p>
 						<span style={{ color: "#ffff00" }}>Hey, I'm David Silva aka z/zGrav. 24 y/o Portuguese that somehow ended up in Cologne, Germany working at ESL and I am having the time of my life.</span>
 					</p>
@@ -66,16 +68,23 @@ const Shell = () => {
 			</Typing>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'row' }}>
-				<Typing hideCursor speed={-1} startDelay={16000}>
+				<Typing hideCursor speed={-1} startDelay={23000}>
 					<span style={{ color: '#4286f4' }}>
 						guest@hal9000:~$
 					</span>
 				</Typing>
-				<Typing cursor={<Cursor />} speed={200} startDelay={16500}>
+				<Typing cursor={<Cursor />} speed={200} startDelay={25000}>
 					<span>
 						&nbsp;logout
 					</span>
 				</Typing>
+			</div>
+			<div>
+				<Typing hideCursor speed={-1} startDelay={28000}>
+					<p>
+						Connection to hal9000.zgrav.pro closed.
+					</p>
+			</Typing>
 			</div>
 		</div>
 	);
