@@ -65,6 +65,18 @@ const Shell = () => {
 					</p>
 			</Typing>
 			</div>
+			<div style={{ display: 'flex', flexDirection: 'row' }}>
+				<Typing hideCursor speed={-1} startDelay={16000}>
+					<span style={{ color: '#4286f4' }}>
+						guest@hal9000:~$
+					</span>
+				</Typing>
+				<Typing cursor={<Cursor />} speed={200} startDelay={16500}>
+					<span>
+						&nbsp;logout
+					</span>
+				</Typing>
+			</div>
 		</div>
 	);
 };
