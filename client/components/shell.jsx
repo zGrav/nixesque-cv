@@ -4,6 +4,10 @@ import Typing from 'react-typing-animation';
 
 import Cursor from './cursor';
 
+function checkIfMobile() {
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 const Shell = () => {
 	return (
 		<div>
@@ -68,19 +72,19 @@ const Shell = () => {
 			</Typing>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'row' }}>
-				<Typing hideCursor speed={-1} startDelay={26000}>
+				<Typing hideCursor speed={-1} startDelay={checkIfMobile() ? 26000 : 22500}>
 					<span style={{ color: '#4286f4' }}>
 						guest@hal9000:~$
 					</span>
 				</Typing>
-				<Typing cursor={<Cursor />} speed={200} startDelay={28000}>
+				<Typing cursor={<Cursor />} speed={200} startDelay={checkIfMobile() ? 28000 : 23000}>
 					<span>
 						&nbsp;logout
 					</span>
 				</Typing>
 			</div>
 			<div>
-				<Typing hideCursor speed={-1} startDelay={30000}>
+				<Typing hideCursor speed={-1} startDelay={checkIfMobile() ? 30000 : 25000}>
 					<p>
 						Connection to hal9000.zgrav.pro closed.
 					</p>
