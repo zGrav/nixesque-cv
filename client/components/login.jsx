@@ -40,7 +40,7 @@ const Login = (dispatch, doneLoginTyping) => {
 				</p>
 			</Typing>
 			<br />
-			<Typing hideCursor onFinishedTyping={() => doneLoginTyping(dispatch)} speed={-1} startDelay={10000}>
+			<Typing hideCursor onFinishedTyping={() => doneLoginTyping(dispatch)} speed={-1} startDelay={11000}>
 				<p>
 					Grabbing a shell!
 				</p>
