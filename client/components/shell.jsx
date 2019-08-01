@@ -37,19 +37,19 @@ const Shell = () => {
 			</div>
 			<br />
 			<div style={{ display: 'flex', flexDirection: 'row' }}>
-				<Typing hideCursor speed={-1} startDelay={7000}>
+				<Typing hideCursor speed={-1} startDelay={11000}>
 					<span style={{ color: '#4286f4' }}>
 						guest@hal9000:~$
 					</span>
 				</Typing>
-				<Typing cursor={<Cursor />} speed={200} startDelay={7500}>
+				<Typing cursor={<Cursor />} speed={200} startDelay={11500}>
 					<span>
 						&nbsp;cat whoiszgrav.txt
 					</span>
 				</Typing>
 			</div>
 			<div>
-				<Typing hideCursor speed={-1} startDelay={15000}>
+				<Typing hideCursor speed={-1} startDelay={16000}>
 					<br />
 					<p>
 						Why, I'm very glad you're curious about who I am :)
@@ -58,10 +58,12 @@ const Shell = () => {
 						You may be wondering why I built this page? Simple answer, I was bored and decided to do something cool.
 					</p>
 					<p>
-						<span style={{ color: "#ffff00" }}>Hey, I'm David Silva aka z/zGrav. 24 y/o Portuguese that somehow ended up in Cologne, Germany working at ESL and I am having the time of my life.</span>
+						<span style={{ color: '#ffff00' }}>
+							Hey, I'm David Silva aka z/zGrav. {new Date().getFullYear() - 1994} y/o Portuguese that somehow ended up in IT and I am having the time of my life.
+						</span>
 					</p>
 					<p>
-						I play videogames and code from time to time.
+						I play videogames from time to time and code... like a lot.
 					</p>
 					<p>
 						If you want to have a chat, feel free to hit me up on my email or Twitter for example. Here is my email <a href="mailto:me@zgrav.pro" style={{ color: "#0bc" }}>me@zgrav.pro</a> and handle: <a href="https://twitter.com/notzGrav" style={{ color: "#0bc" }} target="_blank">@notzGrav</a>
@@ -69,26 +71,26 @@ const Shell = () => {
 					<p>
 						I also have my legacy "digital-cv" still up which you can check out here: <a href="https://zgrav.pro/index_old.html" style={{ color: "#0bc" }} target="_blank">OLDIE</a>
 					</p>
-			</Typing>
+				</Typing>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'row' }}>
-				<Typing hideCursor speed={-1} startDelay={checkIfMobile() ? 26000 : 22500}>
+				<Typing hideCursor speed={-1} startDelay={checkIfMobile() ? 46000 : 42500}>
 					<span style={{ color: '#4286f4' }}>
 						guest@hal9000:~$
 					</span>
 				</Typing>
-				<Typing cursor={<Cursor />} speed={200} startDelay={checkIfMobile() ? 28000 : 23000}>
+				<Typing cursor={<Cursor />} speed={200} startDelay={checkIfMobile() ? 48000 : 43000}>
 					<span>
 						&nbsp;logout
 					</span>
 				</Typing>
 			</div>
 			<div>
-				<Typing hideCursor speed={-1} startDelay={checkIfMobile() ? 30000 : 25000}>
+				<Typing hideCursor speed={-1} startDelay={checkIfMobile() ? 50000 : 45000}>
 					<p>
 						Connection to hal9000.zgrav.pro closed.
 					</p>
-			</Typing>
+				</Typing>
 			</div>
 		</div>
 	);

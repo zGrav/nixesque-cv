@@ -88,6 +88,7 @@ app.get('/', (req, res) => {
 	res.render('index', {
 		bundle: '/static/bundle.js',
 		environment: 'window.API_ENDPOINT="//localhost:3001"',
+		layout: false,
 	});
 });
 
