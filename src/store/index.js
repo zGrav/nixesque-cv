@@ -1,6 +1,7 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 export const Stages = {
+	OFF: 'OFF',
 	CHAIR_AUDIO: 'CHAIR_AUDIO',
 	BOOTUP: 'BOOTUP',
 	SPLASH: 'SPLASH',
@@ -8,17 +9,16 @@ export const Stages = {
 	SHELL: 'SHELL',
 };
 
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
 const slice = createSlice({
 	name: 'app',
-	// phones have no sound effects, so they skip straight to the boot screen
-	initialState: { stage: isMobile ? Stages.BOOTUP : Stages.CHAIR_AUDIO, isMobile },
+	// silent is set if the browser still refuses to play audio
+	initialState: { stage: Stages.OFF, silent: false },
 	reducers: {
 		setStage: (state, { payload }) => { state.stage = payload; },
+		setSilent: (state) => { state.silent = true; },
 	},
 });
 
-export const { setStage } = slice.actions;
+export const { setStage, setSilent } = slice.actions;
 
 export default configureStore({ reducer: { app: slice.reducer } });

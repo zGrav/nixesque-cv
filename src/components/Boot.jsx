@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import AudioClip from './AudioClip';
 import { Sequence, Typing } from './Typing';
@@ -37,20 +37,16 @@ const Line = ({ line, onDone }) => {
 	return <Typing as="div" speed={25} delay={line.startsWith('[') ? 250 : 400} onDone={onDone}>{content}</Typing>;
 };
 
-/** Shows the boot log once the power-on sound (if any) has finished playing. */
-const Boot = ({ isMobile, onDone }) => {
-	const [ready, setReady] = useState(false);
-
-	useEffect(() => {
-		if (!isMobile) return undefined;
-		const timer = setTimeout(() => setReady(true), 5000);
-		return () => clearTimeout(timer);
-	}, [isMobile]);
+/** Shows the boot log once the screen has faded in and the power-on sound has finished. */
+const Boot = ({ silent, screenOn, onBlocked, onDone }) => {
+	const [audioDone, setAudioDone] = useState(silent);
 
 	return (
 		<>
-			{isMobile ? <p>Sadly on phone, there is no SFX :(</p> : <AudioClip src="https://zgrav.pro/poweron.mp3" onEnd={() => setReady(true)} />}
-			{ready ? (
+			{silent
+				? <p>Sadly your browser blocked the sound, there is no SFX :(</p>
+				: <AudioClip src="https://zgrav.pro/poweron.mp3" onBlocked={onBlocked} onEnd={() => setAudioDone(true)} />}
+			{audioDone && screenOn ? (
 				<Sequence onDone={onDone}>
 					{bootLines.map((line) => <Line key={line} line={line} />)}
 				</Sequence>
