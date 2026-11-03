@@ -21,6 +21,7 @@ coverage
 
 # Build folder can be generated from src
 build
+dist
 
 # Compiled folder can be generated from src
 compiled
